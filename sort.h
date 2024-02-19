@@ -4,6 +4,7 @@
 /* ------------ sys libraries ------------ */
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /* ----------- Macros comparison --------*/
 #define UP 0
