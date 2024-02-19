@@ -4,51 +4,25 @@
 /* ------------ sys libraries ------------ */
 #include <stdlib.h>
 #include <stdio.h>
-/* ------------ print_array ------------ */
+
+/* ----------- Macros comparison --------*/
+#define UP 0
+#define DOWN 1
+
 /**
- * print_array - Prints an array of integers
- *
- * @array: The array to be printed
- * @size: Number of elements in @array
+ * enum bool - Enumeration of Boolean values.
+ * @false: Equals 0.
+ * @true: Equals 1.
  */
 
-void print_array(const int *array, size_t size)
+typedef enum bool
 {
-	size_t i;
+	false = 0,
+	true
+} bool;
 
-	i = 0;
-	while (array && i < size)
-	{
-		if (i > 0)
-			printf(", ");
-		printf("%d", array[i]);
-		++i;
-	}
-	printf("\n");
-}
-/* ------------ print_list ------------ */
-/**
- * print_list - Prints a list of integers
- *
- * @list: The list to be printed
- */
 
-void print_list(const listint_t *list)
-{
-	int i;
-
-	i = 0;
-	while (list)
-	{
-		if (i > 0)
-			printf(", ");
-		printf("%d", list->n);
-		++i;
-		list = list->next;
-	}
-	printf("\n");
-}
-
+/* ------------ double linke list struct ------------ */
 
 /**
  * struct listint_s - Doubly linked list node
@@ -66,6 +40,8 @@ typedef struct listint_s
 } listint_t;
 
 /* ************** project files prototypes ************** */
+void insertion_sort_list(listint_t **list);
+void bubble_sort(int *array, size_t size);
 
 
 #endif
